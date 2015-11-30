@@ -18,6 +18,8 @@
 
 ### Apache Kafka
 
+  > version : 2.9.1-0.8.2.2
+
   > 建立一个Zookeeper ，2个Kafka broker 结构的消息处理系统
 
   > 用Python实现Kafka Consumer ，处理email 和 sms Topic
