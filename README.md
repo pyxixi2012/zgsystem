@@ -13,9 +13,14 @@
   > 目前使用Sink有，Mongodb ，Kafka ，Log
 
 
-### 使用Apache Kafka 作为实时消息处理的通道，根据业务类型建立不同的Topic 
+### Apache Kafka
 
   > 建立一个Zookeeper ，2个Kafka broker 结构的消息处理系统
   
   > 用Python实现Kafka Consumer ，处理email 和 sms Topic
+
+### Python
+
+  > 基于Python 2.7
+
   
