@@ -1,8 +1,6 @@
 ## 安装Flume docker image
 
-Starting the Docker daemon  
 当 Docker 安装完成之后，你需要启动 docker 进程。  
-
   > $ sudo service docker start  
 如果我们希望 Docker 默认开机启动，如下操作：  
 
@@ -30,4 +28,11 @@ Starting the Docker daemon
 3.check builded flume image   
   > $ sudo docker images|grep flume-http  
 
-4.
+4.fun flume image   
+  > $ sudo docker run -d -p 444:50004 -t zhiguoguo/flume-http
+  
+5.view running container logs
+  > $ sudo docker logs $(sudo docker ps -q)  
+
+6.stop running container 
+  > $ sudo docker stop $(sudo docker ps -q)  
