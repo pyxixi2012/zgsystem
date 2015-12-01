@@ -19,7 +19,7 @@
 
 2.edit flume conf   
   > view flume-http.conf  
-  
+
 
 3.build new flume image from Dockerfile  
   > $ cd /data/work/app/docker/flume  
@@ -30,9 +30,11 @@
 
 4.fun flume image   
   > $ sudo docker run -d -p 444:50004 -t zhiguoguo/flume-http
-  
+
 5.view running container logs
   > $ sudo docker logs $(sudo docker ps -q)  
 
-6.stop running container 
+6.stop running container
   > $ sudo docker stop $(sudo docker ps -q)  
+
+7.test git

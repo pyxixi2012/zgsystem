@@ -232,10 +232,7 @@
   > mark
 
 7. run flume-http image
-  > $sudo docker run -p 444:50004 -t zhiguoguo/flume-http  
-  > Q&A :  not yet config mongodb and kafka sink ,so run with error
-
-8. view container running logs
+  > $sudo docker run -d -p 444:50004 -t zhiguoguo/flume-httpogs
   > $sudo docker ps|grep flume-http  
   > $sudo docker logs  be7a4c50e159
 
