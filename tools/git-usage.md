@@ -16,3 +16,9 @@ $ git init
 $ cd ~/.ssh
 cat id_rsa.pub ,add content to github SSH keys
 ```
+
+### atom git usage
+```
+atom install git-plus package
+press key "ctrl+shift+p" ,input  git commit all ,git commit and push
+```
