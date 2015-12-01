@@ -407,3 +407,5 @@ a1.channels.c3.transactionCapacity = 100
 #a1.sinks.k2.type = logger
 #a1.sinks.k2.channel = c2
 ```
+
+## export HTTP_PROXY="http://192.168.1.234:1080"
