@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+serviceURL	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^serviceURL = "http:\/\/sdk2.entinfo.cn:8061\/webservice.asmx"$/;"	variable	line:9
+serviceURL	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^serviceURL = "sdk2.entinfo.cn"$/;"	variable	line:10
+servicePORT	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^servicePORT = 8061$/;"	variable	line:11
+service	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^service = "\/webservice.asmx"$/;"	variable	line:12
+sn	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^sn = "SDK-NSF-010-00047"$/;"	variable	line:13
+password	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^password = "bb0e8e4("$/;"	variable	line:14
+getMD5	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^def getMD5(sourceStr):$/;"	function	line:22
+main	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^def main():$/;"	function	line:30
+sendMsg	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^def sendMsg(content, tel):$/;"	function	line:77
+mdsmssend	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^def mdsmssend(mobile, content, ext, stime,rrid, msgfmt):$/;"	function	line:101
+sendSMST	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^def sendSMST(telNum,sms):$/;"	function	line:143
+format	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^        format='%(asctime)s.%(msecs)s:%(name)s:%(thread)d:%(levelname)s:%(process)d:%(message)s',$/;"	variable	line:165
+level	/data/work/gitclone/zgsystem/consumer/sms_consumer.py	/^        level=logging.INFO$/;"	variable	line:166
+main	/data/work/gitclone/zgsystem/consumer/email_consumer.py	/^def main():$/;"	function	line:8
+formatEmailEntry	/data/work/gitclone/zgsystem/consumer/email_consumer.py	/^def formatEmailEntry(msg):$/;"	function	line:52
+sendMail	/data/work/gitclone/zgsystem/consumer/email_consumer.py	/^def sendMail(mailparam):$/;"	function	line:72
+format	/data/work/gitclone/zgsystem/consumer/email_consumer.py	/^        format='%(asctime)s.%(msecs)s:%(name)s:%(thread)d:%(levelname)s:%(process)d:%(message)s',$/;"	variable	line:97
+level	/data/work/gitclone/zgsystem/consumer/email_consumer.py	/^        level=logging.INFO$/;"	variable	line:98
+build zookeeper	/data/work/gitclone/zgsystem/Apache_Kafka/conf/README.md	/^### build zookeeper $/;"	function	line:1
+build apache kafka	/data/work/gitclone/zgsystem/Apache_Kafka/conf/README.md	/^### build apache kafka$/;"	function	line:4
+安装Flume docker image	/data/work/gitclone/zgsystem/Apache_Flume/README.md	/^## 安装Flume docker image$/;"	function	line:1
+pull flume image and build new image	/data/work/gitclone/zgsystem/Apache_Flume/README.md	/^### pull flume image and build new image   $/;"	function	line:16
+安装flume zookeeper  kafka python 环境 基于docker image	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^# 安装flume zookeeper  kafka python 环境 基于docker image$/;"	function	line:1
+目录	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^### 目录$/;"	function	line:3
+1.2 config docker env	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^## 1.2 config docker env$/;"	function	line:147
+Describe/configure the source	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#Describe\/configure the source$/;"	function	line:342
+alex	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#alex$/;"	function	line:347
+映射允许每个值通道可以重叠。默认值可以包含任意数量的通道。	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#映射允许每个值通道可以重叠。默认值可以包含任意数量的通道。$/;"	function	line:350
+Describe the mongodb sink 1	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#Describe the mongodb sink 1$/;"	function	line:356
+sink for kafka sms consumer	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#sink for kafka sms consumer$/;"	function	line:366
+sink for kafka email consumer	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#sink for kafka email consumer$/;"	function	line:374
+config kafka sink to kafka broker directly	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#config kafka sink to kafka broker directly$/;"	function	line:377
+config kafka sink to zookeeper cluster	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#config kafka sink to zookeeper cluster$/;"	function	line:379
+Describe the mongodb sink 2	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#Describe the mongodb sink 2$/;"	function	line:385
+a1.sinks.k2.type = org.riderzen.flume.sink.MongoSink	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.type = org.riderzen.flume.sink.MongoSink$/;"	function	line:386
+a1.sinks.k2.host = 192.168.1.215	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.host = 192.168.1.215$/;"	function	line:387
+a1.sinks.k2.port = 50000	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.port = 50000$/;"	function	line:388
+a1.sinks.k2.model = single	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.model = single$/;"	function	line:389
+a1.sinks.k2.db = logdb	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.db = logdb$/;"	function	line:390
+a1.sinks.k2.collection = logtable_1	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.collection = logtable_1$/;"	function	line:391
+a1.sinks.k2.batch = 100	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.batch = 100$/;"	function	line:392
+a1.sinks.k2.channel = c2	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.channel = c2$/;"	function	line:393
+Use a channel which buffers events in memory	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^##Use a channel which buffers events in memory$/;"	function	line:394
+a1.sinks.k2.type = file_roll	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.type = file_roll$/;"	function	line:405
+a1.sinks.k2.sink.directory = /data/work/app/logprog/logs	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.sink.directory = \/data\/work\/app\/logprog\/logs$/;"	function	line:406
+a1.sinks.k2.type = logger	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.type = logger$/;"	function	line:407
+a1.sinks.k2.channel = c2	/data/work/gitclone/zgsystem/install_flume_kafka_zookeeper_python_docker.md	/^#a1.sinks.k2.channel = c2$/;"	function	line:408
+安装flume zookeeper kafka python 环境 基于docker image	/data/work/gitclone/zgsystem/README.md	/^# 安装flume zookeeper kafka python 环境 基于docker image$/;"	function	line:1
+建立zgsystem的消息系统	/data/work/gitclone/zgsystem/README.md	/^## 建立zgsystem的消息系统$/;"	function	line:3
+Apache Flume	/data/work/gitclone/zgsystem/README.md	/^### Apache Flume$/;"	function	line:5
+Zookeeper	/data/work/gitclone/zgsystem/README.md	/^### Zookeeper$/;"	function	line:15
+Apache Kafka	/data/work/gitclone/zgsystem/README.md	/^### Apache Kafka$/;"	function	line:19
+Python	/data/work/gitclone/zgsystem/README.md	/^### Python$/;"	function	line:27
