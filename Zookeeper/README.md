@@ -20,7 +20,7 @@ sudo docker run -d \
 # 单点的zookeeper环境，测试可以用
 docker hub image url : https://hub.docker.com/r/jplock/zookeeper/
 
-sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
+$sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
 
 # 查看zookeeper 运行日志
 sudo docker logs -f 870acbb99046b656bdec2da9e8274c2557f419f8b1ba6a5068abdfdb1846dd30

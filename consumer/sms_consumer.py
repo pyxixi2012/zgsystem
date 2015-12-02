@@ -6,12 +6,6 @@ import httplib
 import re
 import urllib ,urllib2
 
-serviceURL = "http://sdk2.entinfo.cn:8061/webservice.asmx"
-serviceURL = "sdk2.entinfo.cn"
-servicePORT = 8061
-service = "/webservice.asmx"
-sn = "SDK-NSF-010-00047"
-password = "bb0e8e4("
 
 """
 * 方法名称：getMD5
@@ -25,7 +19,7 @@ def getMD5(sourceStr):
     Return the md5 hash of the password+salt
     """
     return hashlib.md5(sourceStr).hexdigest().upper()
-    
+
 #kafka consumer client
 def main():
     # more advanced consumer -- multiple topics w/ auto commit offset
@@ -83,7 +77,7 @@ def sendMsg(content, tel):
         mdsmssend(tel, content, "", "", "", "")
     if result_mt == "":
         mdsmssend(tel, content, "", "", "", "")
-    
+
     if result_mt == "":
         print("信息发送结果：% s " %  (result_mt))
         status = 0
@@ -118,7 +112,7 @@ def mdsmssend(mobile, content, ext, stime,rrid, msgfmt):
     xml += "</mdsmssend>"
     xml += "</soap:Body>"
     xml += "</soap:Envelope>"
-    
+
     print(('soap xml is %s') % (xml))
 
     print(('connect info is %s ,%s,%s, %d, %s') % (serviceURL ,servicePORT, service, len(xml),soapAction))
@@ -138,7 +132,7 @@ def mdsmssend(mobile, content, ext, stime,rrid, msgfmt):
     #get send sms Result
     regx = re.compile('<mdsmssendResult>(.*)</mdsmssendResult>')
     return regx.findall(reply_body)[0]
-    
+
 #send sms to webservice gw using http get method
 def sendSMST(telNum,sms):
     import urllib ,urllib2
@@ -157,9 +151,9 @@ def sendSMST(telNum,sms):
         the_page = response.read()
         print the_page
     except Exception,e:print e;return None
-    
-    
-    
+
+
+
 if __name__ == "__main__":
     logging.basicConfig(
         format='%(asctime)s.%(msecs)s:%(name)s:%(thread)d:%(levelname)s:%(process)d:%(message)s',

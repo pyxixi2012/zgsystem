@@ -119,8 +119,20 @@
 
   > $ sudo chkconfig docker on
 
+5. install docker-compose
+  install docker-compose from curl script ,install lastest version
+  ```
+  $su - root
 
-5. uninstal docker
+  $curl -L https://github.com/docker/compose/releases/download/1.5.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+  $chmod +x /usr/local/bin/docker-compose
+
+  sudo docker-compose --version
+
+  docker-compose version: 1.5.1
+  ```
+6. uninstal docker
 
   You can uninstall the Docker software with yum.
 
