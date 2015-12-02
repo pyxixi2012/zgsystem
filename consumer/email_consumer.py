@@ -9,11 +9,11 @@ def main():
     # more advanced consumer -- multiple topics w/ auto commit offset
     # management
     consumer = KafkaConsumer('email',  bootstrap_servers=['localhost:9092'], group_id='None', auto_commit_enable=True, auto_commit_interval_ms=30 * 1000, auto_offset_reset='smallest')
-    
+
     # Infinite iteration
     for m in consumer:
         # do_some_work(m)
-    
+
         # Mark this message as fully consumed
         # so it can be included in the next commit
         #
@@ -33,47 +33,47 @@ def main():
         """
         #format mail info entry
         mailParam = formatEmailEntry(msg)
-        #send mail entry info 
+        #send mail entry info
         sendMail(mailParam)
         #end send mail
         #end format
         consumer.task_done(m)
         # If auto_commit_enable is False, remember to commit() periodically
         consumer.commit()
-    
+
     # Batch process interface
     while True:
         for m in kafka.fetch_messages():
             # process_message(m)
             consumer.task_done(m)
         time.sleep(1)
-            
-#format sended mail info entry from template            
+
+#format sended mail info entry from template
 def formatEmailEntry(msg):
     pass
     mailparam = {}
-    mailparam['fro'] = 'wei.yun@zhiguoguo.com'
-    mailparam['to'] = ['pengdi.yang@zhiguoguo.com','yangpengdi2008@163.com']
-    mailparam['to'] = ['pengdi.yang@zhiguoguo.com']
-    mailparam['pwd'] = 'zg123456'
-    mailparam['subject'] = 'test'
+    mailparam['fro'] = 'xxx@xxx.com'
+    mailparam['to'] = ['xxx@xxx.com','xxx@xxx.com']
+    mailparam['to'] = ['xxx@xxx.com']
+    mailparam['pwd'] = 'xxx'
+    mailparam['subject'] = ''
     mailparam['text'] = 'htmlstr'
     mailparam['text'] = msg['body']
     mailparam['files'] = ['jobsched.cfg']
     mailparam['files'] = []
-    mailparam['server'] = 'smtp.exmail.qq.com'
+    mailparam['server'] = 'xxx.xxx.xxx'
     mailparam['server_port'] = 25
     mailparam['entry'] = 'this is context'
-    
+
     return mailparam
-    
+
 
 #发送邮件函数
 def sendMail(mailparam):
     try:
         #put mail job into send mail process
         mail = sendmail.SendmailJob(mailparam)
-        
+
         sendstatus = mail.__call__('dfdkfjd')
         if sendstatus :
             print('sucess to send mail to %s' % (str(mailparam)))
@@ -87,10 +87,10 @@ def sendMail(mailparam):
     except:
         del mail
         print('error to send mail to %s ' % (str(mailparam)))
-    
-    
-    #end put mail 
-        
+
+
+    #end put mail
+
 
 if __name__ == "__main__":
     logging.basicConfig(
