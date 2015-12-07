@@ -26,7 +26,7 @@
   > $bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic zgg.email
 
 ## Starting a producer - sending messages
-  > $bin/kafka-console-producer.sh --broker-list localhost:11002 localhost:11003 localhost:11004 --topic zgg.email
+  > $bin/kafka-console-producer.sh --broker-list 192.168.1.215:11002 192.168.1.215:11003 192.168.1.215:11004 --topic zgg.email
 
 ## Starting a consumer - consuming messages
-  > $bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic zgg.email
+  > $bin/kafka-console-consumer.sh --zookeeper 192.168.1.215:2181 --from-beginning --topic zgg.email

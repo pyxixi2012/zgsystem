@@ -1,40 +1,30 @@
 zookeeper:
   image: wurstmeister/zookeeper
   ports:
-    - "2181:2181"
-kafka_9092:
+    - "192.168.1.215:2181:2181"
+kafka_11002:
   build: ./broker-9092
   ports:
-    - "11002:9092"
+    - "192.168.1.215:11002:9092"
   links:
     - zookeeper:zk
   environment:
     KAFKA_ADVERTISED_HOST_NAME: 192.168.1.215
     KAFKA_BROKER_ID: 1
+    KAFKA_ZOOKEEPER_CONNECT: 192.168.1.215:2181
     KAFKA_LOG_DIRS: /tmp/kafka-logs-1
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-kafka_9093:
+kafka_11003:
   build: ./broker-9093
   ports:
-    - "11003:9092"
+    - "192.168.1.215:11003:9092"
   links:
     - zookeeper:zk
   environment:
     KAFKA_ADVERTISED_HOST_NAME: 192.168.1.215
-    KAFKA_BROKER_ID: 2
-    KAFKA_LOG_DIRS: /tmp/kafka-logs-2
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-kafka_9094:
-  build: ./broker-9094
-  ports:
-    - "11004:9092"
-  links:
-    - zookeeper:zk
-  environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.1.215
-    KAFKA_BROKER_ID: 3
-    KAFKA_LOG_DIRS: /tmp/kafka-logs-3
+    KAFKA_BROKER_ID: 1
+    KAFKA_ZOOKEEPER_CONNECT: 192.168.1.215:2181
+    KAFKA_LOG_DIRS: /tmp/kafka-logs-1
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
