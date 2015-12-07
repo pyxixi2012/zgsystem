@@ -1,0 +1,21 @@
+### build zookeeper
+  > $docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper  
+  > 注意： 需要修改防火墙，开放相关端口
+### build apache kafka
+  > pull kafak docker image from  docker hub digitalwonderland/kafka
+
+  > $sudo docker run -d -e KAFKA_BROKER_ID=1 -e KAFKA_ADVERTISED_HOST_NAME=192.168.1.215 -e KAFKA_ZOOKEEPER_CONNECT=192.168.1.215 digitalwonderland/kafka
+
+
+## build single zookeeper node and 2 kafka broker use wurstmeister/kafka
+
+## compose to run all CONTAINER
+  > $sudo docker-compose up
+
+## scale kafka node
+  > $sudo docker-compose scale kafka=1
+
+## add a broker manual
+  > $sudo docker run -d -e KAFKA_BROKER_ID=3 -e KAFKA_ADVERTISED_HOST_NAME=192.168.1.215 -e KAFKA_ZOOKEEPER_CONNECT=192.168.1.215:2181 -p 9092:9092 wurstmeister/kafka:0.8.2.0
+
+  > $sudo docker run -e KAFKA_BROKER_ID=3 -e KAFKA_ADVERTISED_HOST_NAME=192.168.1.215 -e KAFKA_ZOOKEEPER_CONNECT=192.168.1.215:2181 -p 9092:9092 wurstmeister/kafka:0.8.2.0

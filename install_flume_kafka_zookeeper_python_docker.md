@@ -119,6 +119,10 @@
 
   > $ sudo chkconfig docker on
 
+  Enter container shell with exec
+  > $ sudo docker ps   
+  > $ sudo docker exec -it 069774caa841  /bin/bash
+
 5. install docker-compose
   install docker-compose from curl script ,install lastest version
   ```
