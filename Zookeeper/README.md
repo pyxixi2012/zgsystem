@@ -26,3 +26,10 @@ $sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
 sudo docker logs -f 870acbb99046b656bdec2da9e8274c2557f419f8b1ba6a5068abdfdb1846dd30
 
 ```
+## 常用zookeeper管理命令
+
+### 查看zookeeper的运行状态
+$sudo bin/zkServer.sh status
+
+### 查看zookeeper的detail运行状态
+$sudo echo stat|nc 192.168.1.215 2181
