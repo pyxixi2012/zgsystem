@@ -15,7 +15,7 @@ zookeeper:
     ZOOKEEPER_ZK_NODE_0_PEER_PORT: 2888
     ZOOKEEPER_ZK_NODE_0_LEADER_ELECTION_PORT: 3888
 kafka_9092:
-  image: zhiguoguo.io:5000/zhiguoguo/kafkadocker_kafka_9092
+  build: ./broker-9092
   ports:
     - "192.168.88.222:11002:9092"
   links:
@@ -32,7 +32,7 @@ kafka_9092:
     - /var/run/docker.sock:/var/run/docker.sock
     - /home/yunwei/app/zgsystem/dbdir/kafka_db_dir/kafka-broker-1/logs:/tmp/kafka-logs-1
 kafka_9093:
-  image: zhiguoguo.io:5000/zhiguoguo/kafkadocker_kafka_9092
+  build: ./broker-9093
   ports:
     - "192.168.88.222:11003:9092"
   links:
@@ -46,7 +46,7 @@ kafka_9093:
     - /var/run/docker.sock:/var/run/docker.sock
     - /home/yunwei/app/zgsystem/dbdir/kafka_db_dir/kafka-broker-2/logs:/tmp/kafka-logs-2
 flume_http:
-  image: zhiguoguo.io:5000/zhiguoguo/flume-http
+  image: zhiguoguo/flume-http
   restart: always
   ports: 
     - "192.168.88.222:444:50004"
@@ -54,14 +54,4 @@ flume_http:
     - zookeeper:zk 
   volumes:
     - /home/yunwei/app/zgsystem/dbdir/flume-db-dir/logs:/opt/flume/logs
-
-mongodb:
-  image: zhiguoguo.io:5000/mongodb:base
-  restart: always
-  ports: 
-    - "192.168.88.222:50000:27017"
-  links:
-    - flume_http
-  volumes:
-    - /home/develop/work/gitclone/zgsystem/dbdir/mongodb_db_dir:/usr/local/mongodb/db
 

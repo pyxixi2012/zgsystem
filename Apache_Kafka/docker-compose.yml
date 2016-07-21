@@ -1,0 +1,17 @@
+zookeeper:
+  image: pyxixi2012/zookeeper:3.4.6
+  restart: always
+  ports:
+    - "10.51.92.65:2181:2181"
+    - "10.51.92.65:2888:2888"
+    - "10.51.92.65:3888:3888"
+  environment:
+    ZOOKEEPER_INSTANCES: zk-node-0
+    SERVICE_NAME: zookeeper
+    CONTAINER_NAME: zk-node-0
+    ZOOKEEPER_SERVER_IDS: zk-node-0:1
+    ZOOKEEPER_ZK_NODE_0_HOST: 10.51.92.65
+    ZOOKEEPER_ZK_NODE_0_CLIENT_PORT: 2181
+    ZOOKEEPER_ZK_NODE_0_PEER_PORT: 2888
+    ZOOKEEPER_ZK_NODE_0_LEADER_ELECTION_PORT: 3888
+

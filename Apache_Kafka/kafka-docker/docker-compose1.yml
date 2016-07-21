@@ -1,0 +1,38 @@
+zookeeper:
+  image: mesoscloud/zookeeper:3.4.6-ubuntu-14.04
+  restart: always
+  ports:
+    - "192.168.1.215:2181:2181"
+    - "192.168.1.215:2888:2888"
+    - "192.168.1.215:3888:3888"
+  environment:
+    MYID: 1
+    SERVERS: 192.168.1.215,192.168.1.208
+kafka_9092:
+  build: ./broker-9092
+  ports:
+    - "192.168.1.215:11002:9092"
+  links:
+    - zookeeper:zk
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: 192.168.1.215
+    KAFKA_BROKER_ID: 1
+    KAFKA_LOG_DIRS: /tmp/kafka-logs-1
+    KAFKA_ZOOKEEPER_CONNECT: "192.168.1.215:2181,192.168.1.208:2181"
+    KAFKA_CREATE_TOPICS: email
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+kafka_9093:
+  build: ./broker-9093
+  ports:
+    - "192.168.1.215:11003:9092"
+  links:
+    - zookeeper:zk
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: 192.168.1.215
+    KAFKA_BROKER_ID: 2
+    KAFKA_LOG_DIRS: /tmp/kafka-logs-2
+    KAFKA_ZOOKEEPER_CONNECT: "192.168.1.215:2181,192.168.1.208:2181"
+    KAFKA_CREATE_TOPICS: sms
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock

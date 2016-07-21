@@ -248,7 +248,7 @@
   > mark
 
 7. run flume-http image
-  > $sudo docker run -d -p 444:50004 -t zhiguoguo/flume-httpogs
+  > $sudo docker run -d -p 444:50004 -t zhiguoguo/flume-http
   > $sudo docker ps|grep flume-http  
   > $sudo docker logs  be7a4c50e159
 
